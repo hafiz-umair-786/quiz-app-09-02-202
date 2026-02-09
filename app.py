@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, request, redirect, session, jsonify, flash
 from supabase import create_client, Client
+
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 loaded = load_dotenv()
@@ -391,5 +392,6 @@ def api_questions():
 @app.route("/health")
 def health():
     return "OK"
+
 
 app.run(debug=True)
