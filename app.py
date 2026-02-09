@@ -5,6 +5,8 @@ from supabase import create_client, Client
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 loaded = load_dotenv()
+
+
 print("Loaded .env? SUPABASE_URL:", os.getenv("SUPABASE_URL"))
 print("SUPABASE_KEY exists locally:", bool(os.getenv("SUPABASE_KEY")))
 print("=== LOCAL ENV CHECK ===")
@@ -395,3 +397,4 @@ def health():
 
 
 app.run(debug=True)
+
